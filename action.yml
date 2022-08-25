@@ -1,0 +1,16 @@
+# action.yml
+name: 'Publish Accelerator to Github Pages'
+description: 'This action wraps the accelerator content in a Hugo website and publishes it to Github Pages'
+inputs:
+  repository:
+    description: 'Repository name with owner. For example, owner/repo'
+    default: ${{ github.repository }}
+  accelerator_title:
+    description: 'Title of the accelerator'
+    required: true
+  accelerator_author:
+    description: 'Author of the accelerator'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
