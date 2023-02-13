@@ -2,9 +2,9 @@ name: Run Script
 
 on:
   push:
-    branches: [ main ]
+    branches: [ template/january23-update ]
   pull_request:
-    branches: [ main ]
+    branches: [ template/january23-update ]
 
 jobs:
   build:
