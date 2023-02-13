@@ -21,7 +21,7 @@ jobs:
             import json
 
             with open("data/component_versions.json") as jsonFile:
-            data = json.load(jsonFile)
+              data = json.load(jsonFile)
 
             temp_json = data
             jsonFile.close()
