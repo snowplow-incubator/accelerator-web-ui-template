@@ -1,14 +1,16 @@
 import requests
 import json
+import os
 
 with open("data/component_versions.json") as jsonFile:
     data = json.load(jsonFile)
 
-jsonFile = open("data/component_versions.json", "w+")
-jsonFile.write(json.dumps({"temp": "json"}))
-jsonFile.close()
-
 temp_json = data
+
+if os.path.exists("data/component_versions.json"):
+    os.remove("data/component_versions.json")
+else:
+    print("The file does not exist")
 
 for package in temp_json["packages"]:
     res = requests.get("https://api.github.com/repos" + package["url"])
