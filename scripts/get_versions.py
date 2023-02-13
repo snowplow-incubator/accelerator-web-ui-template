@@ -3,7 +3,7 @@ import json
 
 with open("data/component_versions.json") as jsonFile:
     data = json.load(jsonFile)
-    jsonFile.write(json.dumps({}))
+    jsonFile.write(json.dumps({"temp": "json"}))
 
 temp_json = data
 
