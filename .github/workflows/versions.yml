@@ -4,7 +4,7 @@ on:
   push:
     branches: ${{ github.ref }}
   pull_request:
-    branches: ${{ github.ref }}
+    branches: [ main ]
 
 jobs:
   build:
