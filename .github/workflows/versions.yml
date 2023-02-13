@@ -2,7 +2,7 @@ name: Run Script
 
 on:
   push:
-    branches: ${{ github.ref }}
+    branches: [main ]
   pull_request:
     branches: [ main ]
 
