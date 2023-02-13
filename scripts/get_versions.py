@@ -4,7 +4,7 @@ import json
 with open("data/component_versions.json") as jsonFile:
     data = json.load(jsonFile)
 temp_json = data
-jsonFile.write(json.dumps())
+jsonFile.write(json.dumps({}))
 jsonFile.close()
 for package in temp_json["packages"]:
     res = requests.get("https://api.github.com/repos" + package["url"])
