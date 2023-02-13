@@ -1,9 +1,12 @@
 import requests
 import json
 
-with open("data/component_versions.json", "w+") as jsonFile:
+with open("data/component_versions.json") as jsonFile:
     data = json.load(jsonFile)
-    jsonFile.write(json.dumps({"temp": "json"}))
+
+jsonFile = open("data/component_versions.json", "w+")
+jsonFile.write(json.dumps({"temp": "json"}))
+jsonFile.close()
 
 temp_json = data
 
