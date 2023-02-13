@@ -7,15 +7,12 @@ with open("data/component_versions.json") as jsonFile:
 
 temp_json = data
 
-
 for package in temp_json["packages"]:
     res = requests.get("https://api.github.com/repos" + package["url"])
     version = res.json()["tag_name"]
     package["version"] = version
 
-
 temp_json["last_update"] = time.time()
-print(temp_json)
 jsonFile = open("data/component_versions.json", "w+")
 jsonFile.write(json.dumps(temp_json))
 jsonFile.close()
