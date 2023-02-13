@@ -1,0 +1,36 @@
+name: Run Script
+
+on:
+  push:
+    branches: [ template/january23-update ]
+  pull_request:
+    branches: [ template/january23-update ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import requests
+            import json
+
+            with open("data/component_versions.json") as jsonFile:
+            data = json.load(jsonFile)
+
+            temp_json = data
+            jsonFile.close()
+
+            for package in temp_json["packages"]:
+                res = requests.get("https://api.github.com/repos" + package["url"])
+                version = res.json()["tag_name"]
+                package["version"] = version
+
+            jsonFile = open("data/component_versions.json", "w+")
+            jsonFile.write(json.dumps(temp_json))
+            jsonFile.close()
