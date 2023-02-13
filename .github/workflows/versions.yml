@@ -17,4 +17,15 @@ jobs:
         cache: 'pip' # caching pip dependencies
     - run: pip install -r scripts/requirements.txt
     - run: python scripts/get_versions.py
-
+    - name: commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "update package versions" -a
+          
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: template/january23-update  
