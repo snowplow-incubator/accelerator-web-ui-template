@@ -2,9 +2,9 @@ name: Run Script
 
 on:
   push:
-    branches: [ template/january23-update ]
+    branches: ${{ github.ref }}
   pull_request:
-    branches: [ template/january23-update ]
+    branches: ${{ github.ref }}
 
 jobs:
   build:
@@ -28,4 +28,4 @@ jobs:
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: template/january23-update
+        branch: ${{ github.ref }}
