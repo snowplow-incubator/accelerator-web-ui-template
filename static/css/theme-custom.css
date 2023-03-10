@@ -753,3 +753,60 @@ code {
     color: #000;
     vertical-align: middle;
 }
+
+
+#body .recommendation-panel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+#body .recommendation-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+#body .recommendation-content .recommendation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 45%; */
+    width: 350px;
+    height: 260px;
+    color: #000;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px
+}
+
+button {
+    background-color: #6638b8;
+    color: #fff;
+    border-radius: 13px;
+    height: 26px;
+    padding: 3px 12px 3px 12px;
+}
+
+.foundation {
+    background-color: green;
+}
+
+.intermediate {
+    background-color: orange;
+    color: #000;
+}
+
+.advanced {
+    background-color: red;
+    color: #000;
+}
+
+button::first-letter {
+    text-transform: uppercase;
+}
