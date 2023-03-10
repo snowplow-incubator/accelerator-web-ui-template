@@ -84,6 +84,14 @@
       snowplow('trackPageView');
 
     </script>
+    {{ if .Site.Params.intercom }}
+    <script>
+      window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "wpviw8ji"
+      };
+    </script>
+    {{ end }}
     {{ partial "navbar.html" . }}
     {{ partial "menu.html" . }}
         <section id="body">
