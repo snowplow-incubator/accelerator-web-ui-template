@@ -10,6 +10,8 @@ themesdir = "themes"
   disableSearch = true
   titleSeparator = "|"
   themeVariant = "custom"
+  intercom = true
+
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
