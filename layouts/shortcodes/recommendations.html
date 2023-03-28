@@ -1,12 +1,11 @@
 {{ with .Inner }}{{/* don't do anything, just call it */}}{{ end }}
 {{ $groupId := default "default" (.Get "groupId") }}
-<select name="platform" id="platform">
-  <option value="web">Web</option>
-  <option value="mobile">Mobile</option>
-</select>
 
+
+{{ $recommendations := site.Data.recommendations }}
+<h3>Foundational Accelerators</h3>
 <div class="recommendation-content">
-  {{ range $idx, $recommendation := .Scratch.Get "recommendations" }}
+  {{ range $idx, $recommendations.accelerators.foundation }}
   <a class="recommendation-item" href={{ .link }} target="_blank">
     <h4>
       {{ .name }}
@@ -16,9 +15,43 @@
     </div>
     <div>
       <button>{{ .category }}</button>
-      <button class="{{ .type}}" autocapitalize="on">{{ .type }}</button>
+      <button class="foundation" autocapitalize="on">Foundation</button>
     </div>
   </a>
-
   {{ end }}
+</div>
+<h3>Intermediate Accelerators</h3>
+<div class="recommendation-content">
+  {{ range $idx, $recommendations.accelerators.intermediate }}
+  <a class="recommendation-item" href={{ .link }} target="_blank">
+    <h4>
+      {{ .name }}
+    </h4>
+    <div>
+      {{ .content }}
+    </div>
+    <div>
+      <button>{{ .category }}</button>
+      <button class="intermediate" autocapitalize="on">Intermediate</button>
+    </div>
+  </a>
+  {{ end }}
+</div>
+<h3>Advanced Accelerators</h3>
+<div class="recommendation-content">
+  {{ range $idx, $recommendations.accelerators.advanced }}
+  <a class="recommendation-item" href={{ .link }} target="_blank">
+    <h4>
+      {{ .name }}
+    </h4>
+    <div>
+      {{ .content }}
+    </div>
+    <div>
+      <button>{{ .category }}</button>
+      <button class="advanced" autocapitalize="on">Advanced</button>
+    </div>
+  </a>
+  {{ end }}
+</div>
 </div>
