@@ -785,7 +785,7 @@ code {
     margin: 25px
 }
 
-button {
+.pill {
     background-color: #6638b8;
     color: #fff;
     border-radius: 13px;
