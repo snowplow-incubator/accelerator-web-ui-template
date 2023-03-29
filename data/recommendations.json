@@ -25,14 +25,14 @@
         "intermediate": [
             {
                 "name": "Ecommerce Analytics",
-                "link": "https://snowplow.io/data-product-accelerators/ecommerce-analytics-dpa/",
+                "link": "https://docs.snowplow.io/accelerators/ecommerce/",
                 "category": "Web",
                 "type": "Intermediate",
                 "content": "Powerful ecommerce analytics to help you optimize and improve your customer experience"
             },
             {
                 "name": "Consent Tracking for Marketing",
-                "link": "https://snowplow.io/data-product-accelerators/marketing-consent-tracking/",
+                "link": "https://docs.snowplow.io/accelerators/consent/",
                 "category": "Web",
                 "type": "Intermediate",
                 "content": "Gain full transparency into marketing consent at every step of their customer journey"
@@ -41,14 +41,14 @@
         "advanced": [
             {
                 "name": "Fractional Attribution Modeling",
-                "link": "https://snowplow.io/data-product-accelerators/fractional-attribution/",
+                "link": "https://docs.snowplow.io/accelerators/snowplow-fractribution/",
                 "category": "Web",
                 "type": "Advanced",
                 "content": "Empower your marketing team with multi-touch Fractional Attribution Modeling."
             },
             {
                 "name": "Build a Composable CDP with Predictive ML Modeling",
-                "link": "https://docs.snowplow.io/accelerators/composable-cdp-with-predictive-ml-modeling/",
+                "link": "https://snowplow.io/data-product-accelerators/composable-cdp/",
                 "category": "Web",
                 "type": "Advanced",
                 "content": "Create a single customer view and predict likelihood to convert with a composable CDP using Snowplow, Databricks, and Hightouch"
