@@ -6,7 +6,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Dispatch event
-        uses: guilouro/multiple-repositories-dispatch@latest
+        uses: guilouro/multiple-repositories-dispatch@master
         with:
           repo_token: ${{ secrets.REPO_TOKEN }}
           event_type: event_name
