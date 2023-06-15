@@ -5,11 +5,11 @@ jobs:
   run-updater:
       runs-on: ubuntu-latest
       steps:
-      name: Dispatch event
-      uses: guilouro/multiple-repositories-dispatch@latest
-      with:
-        repo_token: ${{ secrets.REPO_TOKEN }}
-        event_type: event_name
-        repositories: |
-          snowplow-incubator/accelerator-playground
-        client_payload: '{"github": ${{ toJson(github) }}}'
+      - name: Dispatch event
+      - uses: guilouro/multiple-repositories-dispatch@latest
+        with:
+          repo_token: ${{ secrets.REPO_TOKEN }}
+          event_type: event_name
+          repositories: |
+            snowplow-incubator/accelerator-playground
+          client_payload: '{"github": ${{ toJson(github) }}}'
