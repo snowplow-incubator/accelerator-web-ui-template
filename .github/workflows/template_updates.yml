@@ -1,9 +1,8 @@
 - name: Dispatch event
   uses: guilouro/multiple-repositories-dispatch@v1
   with:
-    repo_token: ***
+    repo_token: ${{ secrets.REPO_TOKEN }}
     event_type: trigger
     repositories: |
-      user/repo1
-      user/repo2
+      snowplow-incubator/accelerator-playground
     client_payload: '{"github": ${{ toJson(github) }}}'
