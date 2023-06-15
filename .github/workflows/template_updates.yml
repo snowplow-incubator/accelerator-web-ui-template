@@ -5,8 +5,8 @@ jobs:
   run-updater:
       runs-on: ubuntu-latest
       steps:
-      - name: Dispatch event
       - uses: guilouro/multiple-repositories-dispatch@latest
+      - name: Dispatch event
         with:
           repo_token: ${{ secrets.REPO_TOKEN }}
           event_type: event_name
