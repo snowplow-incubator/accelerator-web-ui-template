@@ -9,6 +9,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: username/my-repo
+          repository: snowplow-incubator/accelerator-playground
           event-type: my-event
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
