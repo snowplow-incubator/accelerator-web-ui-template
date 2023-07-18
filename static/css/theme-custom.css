@@ -681,7 +681,6 @@ pre {
     background-repeat: no-repeat;
     width: 75px;
     height: 30px !important;
-    /* bottom: -1px !important; */
     vertical-align: middle;
     text-align: right;
     position: absolute;
@@ -696,7 +695,6 @@ pre {
     margin-left: -.2rem;
     cursor: pointer;
     margin: 0;
-    /* border-radius: 0 2px 2px 0; */
 }
 
 .copy-to-clipboard:hover {
@@ -757,54 +755,78 @@ code {
 
 #body .recommendation-panel {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 32px;
     margin-bottom: 32px;
 }
 
-#body .recommendation-content {
+#body .recommendation-card {
     display: flex;
-    flex-flow: row wrap;
+    width: 45%;
+    max-width: 350px;
+    min-width: 270px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+#body .recommendation-img {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+#body .recommendation-info {
+    display: flex;
+    flex-flow: column;
     justify-content: flex start;
     margin: 1rem;
+}
+
+#body .recommendation-info h4 {
+    margin-top: 16px !important;
+    font-weight: 400;
+}
+
+#body .recommendation-info a {
+    color: #FC5E36;
+    font-weight: bolder;
+    border-bottom: none;
+}
+
+#body .recommendation-info a.highlight:after {
+    height: 1px;
+    transition: none;
+    display: none;
 }
 
 #body .recommendation-content .recommendation-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* width: 45%; */
-    width: 350px;
-    height: 260px;
+    width: 100%;
     color: #000;
     background-color: #FFFFFF;
     border-radius: 2px;
     box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 25px
+
 }
 
 .pill {
-    background-color: #6638b8;
+    background-color: #000;
     color: #fff;
     border-radius: 13px;
-    height: 26px;
-    padding: 3px 12px 3px 12px;
-}
-
-.foundation {
-    background-color: green;
-}
-
-.intermediate {
-    background-color: orange;
-    color: #000;
-}
-
-.advanced {
-    background-color: red;
-    color: #000;
+    letter-spacing: 0.125em !important;
+    font-size: 15px;
+    line-height: 120%;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
 button::first-letter {
